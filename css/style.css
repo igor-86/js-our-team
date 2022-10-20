@@ -4,5 +4,47 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+}
+body {
+    background-color: #eae9e9;
+}
 
+/* main */
+.container {
+    max-width: 1100px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.container> .title {
+    width: 40%;
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.container-wrap {
+    width: 100%;
+    
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem 1rem;
+}
+.card {
+    width: calc(100% / 3 - 1rem);
+    background-color: white;
+    padding-bottom: 0.5rem;
+}
+.card > img {
+    max-width: 100%;
+    margin-bottom:0.5rem;
+}
+.card h3, p {
+    text-align: center;
+}
 

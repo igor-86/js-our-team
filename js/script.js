@@ -56,11 +56,11 @@ function personInfo(personArray){
         console.log(thisClasses.name, thisClasses.role, thisClasses.image);
 
         //stampo stringa sul dom con le informazioni
-        person.innerHTML +=
+       /*  person.innerHTML +=
         `
             <h1> ${thisClasses.name} ${thisClasses.role} ${thisClasses.image} </h1>
         
-        `
+        ` */
     
     }
     
