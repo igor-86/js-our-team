@@ -42,15 +42,26 @@ const salveInfo = personInfo(arrayPerson);
 
 
 
+
 /* Functions */
 /**
- * Description stampare nome delle classi in console
+ * Description stampare nome delle classi in console e sul Dom
  * @param {Array} personArray
  */
 function personInfo(personArray){
+    //catturo elemento sul dom
+    const person = document.getElementById("person");
     for(let i= 0; i < personArray.length; i++){
         let thisClasses = personArray[i];
         console.log(thisClasses.name, thisClasses.role, thisClasses.image);
+
+        //stampo stringa sul dom con le informazioni
+        person.innerHTML +=
+        `
+            <h1> ${thisClasses.name} ${thisClasses.role} ${thisClasses.image} </h1>
+        
+        `
+    
     }
     
 }
