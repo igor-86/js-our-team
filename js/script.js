@@ -15,7 +15,7 @@ const arrayPerson = [
     {
     name: "Walter Gordon",
     role: "Office Manager",
-    image:" walter-gordon-office-manager.jpg",
+    image:"walter-gordon-office-manager.jpg",
     },
     {
     name: "Angela Lopez",
@@ -50,17 +50,23 @@ const salveInfo = personInfo(arrayPerson);
  */
 function personInfo(personArray){
     //catturo elemento sul dom
-    const person = document.getElementById("person");
+    const person = document.querySelector(".container-wrap");
+    console.log(person);
+
     for(let i= 0; i < personArray.length; i++){
         let thisClasses = personArray[i];
         console.log(thisClasses.name, thisClasses.role, thisClasses.image);
 
         //stampo stringa sul dom con le informazioni
-       /*  person.innerHTML +=
+        person.innerHTML +=
         `
-            <h1> ${thisClasses.name} ${thisClasses.role} ${thisClasses.image} </h1>
+        <div class="card">
+            <img src="img/${thisClasses.image}" alt="">
+            <h3>${thisClasses.name}</h3>
+            <p>${thisClasses.role}</p>
+        </div>
         
-        ` */
+        `
     
     }
     
