@@ -36,3 +36,21 @@ const arrayPerson = [
 ];
 
 console.log(arrayPerson);
+
+//Richiamo funzione che stampa nomi in console
+const salveInfo = personInfo(arrayPerson);
+
+
+
+/* Functions */
+/**
+ * Description stampare nome delle classi in console
+ * @param {Array} personArray
+ */
+function personInfo(personArray){
+    for(let i= 0; i < personArray.length; i++){
+        let thisClasses = personArray[i];
+        console.log(thisClasses.name, thisClasses.role, thisClasses.image);
+    }
+    
+}
