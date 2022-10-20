@@ -41,6 +41,23 @@ console.log(arrayPerson);
 const salveInfo = personInfo(arrayPerson);
 
 
+const btnOpen = document.querySelector(".btn-act");
+const formAct = document.querySelector(".form");
+const chevron = document.querySelector(".fa-solid");
+
+const inputName = document.getElementById("name");
+const inputRole = document.getElementById("role");
+const inputImage = document.getElementById("image");
+const btnInsert = document.getElementById("btn");
+console.log(btnInsert, inputName, inputRole, inputImage);
+
+//Richiamo funzione che mi permette di integragire con la form
+btnOpen.addEventListener("click", moveForm);
+// event per inserire una nuova card
+btnInsert.addEventListener("click", insertNewCard);
+console.log(btnInsert);
+
+
 
 
 /* Functions */
@@ -50,7 +67,7 @@ const salveInfo = personInfo(arrayPerson);
  */
 function personInfo(personArray){
     //catturo elemento sul dom
-    const person = document.querySelector(".container-wrap");
+    let person = document.querySelector(".container-wrap");
     console.log(person);
 
     for(let i= 0; i < personArray.length; i++){
@@ -71,3 +88,33 @@ function personInfo(personArray){
     }
     
 }
+
+/**
+ * Description Spostare elementi nel dom
+ * @returns {any}
+ */
+function moveForm(){
+    formAct.classList.toggle("move-left");
+    chevron.classList.toggle("rotate-chevron");
+}
+
+function insertNewCard(){
+    let person = document.querySelector(".container-wrap");
+    const newPrf = {
+        name: inputName.value,
+        role: inputRole.value,
+        image: inputImage.value
+    }
+    arrayPerson.push(newPrf);
+    person.innerHTML+=
+        `
+        <div class="card">
+            <img src="${newPrf.image}" alt="">
+            <h3>${newPrf.name}</h3>
+            <p>${newPrf.role}</p>
+        </div>
+        `;
+}
+
+
+

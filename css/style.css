@@ -9,9 +9,15 @@ html {
     font-size: 100%;
 }
 body {
-    background-color: #eae9e9;
+    background-color: #f1efef;
 }
-
+/* Tipography */
+h2 {
+    text-transform: uppercase;
+}
+h2,h3, p {
+    color:#646464;
+}
 /* main */
 .container {
     max-width: 1100px;
@@ -21,15 +27,12 @@ body {
 }
 .container> .title {
     width: 40%;
-    background-color: white;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 2rem;
 }
 .container-wrap {
     width: 100%;
-    
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -43,8 +46,73 @@ body {
 .card > img {
     max-width: 100%;
     margin-bottom:0.5rem;
+    object-fit: cover;
 }
 .card h3, p {
     text-align: center;
+    
 }
+
+/* Form */
+
+.form {
+    position: fixed;
+    top: 50px;
+    right:-226.4px;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: 0.5s ease-in-out;
+}
+.form > input {
+    border-radius: 0.2rem;
+    padding: 0.3rem 0;
+    background-color:lightgray;
+    border: none;
+}
+label {
+    margin-bottom: 0.5rem;
+}
+input#name {
+    margin-bottom: 0.5rem;
+}
+input#role {
+    margin-bottom: 0.5rem;
+}
+#btn {
+    padding: .3rem 1rem;
+    border:none;
+    margin-top: 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+.btn-act {
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    left: -64px;
+    background-color: white;
+    padding: 0 1rem 0rem 1rem;
+    border-radius: 25px 0px 0px 25px;
+}
+.btn-act i {
+    transition: 0.2s ease-in-out;
+}
+.btn-act:hover {
+    cursor: pointer;
+    background-color: #f4f3f3;
+}
+/* Move left form class toggle */
+.move-left {
+    right: 0%;
+}
+.rotate-chevron {
+    transform: rotate(180deg)
+}
+
+
+
 
