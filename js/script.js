@@ -114,7 +114,14 @@ function insertNewCard(){
             <p>${newPrf.role}</p>
         </div>
         `;
+    //ripulisco input
+    removeInput();
 }
 
 
+function removeInput(){
+    inputName.value="";
+    inputRole.value="";
+    inputImage.value="";
+}
 
